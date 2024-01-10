@@ -35,38 +35,30 @@ limitations under the License.
 
 > Create an array containing pseudorandom numbers drawn from a [lognormal][@stdlib/random/base/lognormal] distribution.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/random-array-lognormal
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-lognormal = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-lognormal@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var lognormal = require( 'path/to/vendor/umd/random-array-lognormal/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-lognormal@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.lognormal;
-})();
-</script>
+var lognormal = require( '@stdlib/random-array-lognormal' );
 ```
 
 #### lognormal( len, mu, sigma\[, options] )
@@ -354,14 +346,9 @@ var sz = random.byteLength;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-lognormal@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var logEach = require( '@stdlib/console-log-each' );
+var lognormal = require( '@stdlib/random-array-lognormal' );
 
 // Create a function for generating random arrays originating from the same state:
 var random = lognormal.factory( 2.0, 5.0, {
@@ -388,11 +375,6 @@ var x4 = random( 15 );
 
 // Print the contents:
 logEach( '%f', x4 );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -402,6 +384,13 @@ logEach( '%f', x4 );
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
 <section class="related">
+
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/random-base/lognormal`][@stdlib/random/base/lognormal]</span><span class="delimiter">: </span><span class="description">log-normally distributed pseudorandom numbers.</span>
+-   <span class="package-name">[`@stdlib/random-strided/lognormal`][@stdlib/random/strided/lognormal]</span><span class="delimiter">: </span><span class="description">fill a strided array with pseudorandom numbers drawn from a lognormal distribution.</span>
 
 </section>
 
@@ -476,13 +465,19 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/random-array-lognormal/main/LICENSE
 
-[@stdlib/random/base/lognormal]: https://github.com/stdlib-js/random-base-lognormal/tree/umd
+[@stdlib/random/base/lognormal]: https://github.com/stdlib-js/random-base-lognormal
 
-[@stdlib/array/typed-real-float-dtypes]: https://github.com/stdlib-js/array-typed-real-float-dtypes/tree/umd
+[@stdlib/array/typed-real-float-dtypes]: https://github.com/stdlib-js/array-typed-real-float-dtypes
 
-[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32/tree/umd
+[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/umd
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
+
+<!-- <related-links> -->
+
+[@stdlib/random/strided/lognormal]: https://github.com/stdlib-js/random-strided-lognormal
+
+<!-- </related-links> -->
 
 </section>
 
